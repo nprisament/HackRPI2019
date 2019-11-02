@@ -1,16 +1,14 @@
-fetch('http://example.com/api/endpoint/', {
+fetch('https://api.weather.com/v3/alerts/headlines', {
 	method: 'GET',
-	headers: {
-		Authorization: `Bearer ${userIdToken}`
-	},
-
 	body: JSON.stringify({
-		name: myName,
-		password: myPassword
+		geocode: '44,-117',
+		format: 'json',
+		language 'en-US',
+		apiKey: '9d2908c81003444ea908c81003b44ed4'
 	})
 }).then((response) => {
 	// do something awesome that makes the world a better place
-	return response.displayName;
+	console.log(response);
 }).catch((error) => {
 
 });
