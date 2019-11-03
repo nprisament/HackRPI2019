@@ -44,5 +44,5 @@ module.export = function getWeight(alert, lat, lon){
     let resp = alert.response_types.response_type_cd;
     let floo = alert.flood.fld_severity_cd;
     floo*=(floo == 1 || floo == 2 || floo == 3)
-    return Math.pow(2,c*r)*((5-sev)+(5-urg)+(9-resp)/2+(floo)*4/3)/(3+floo != 0);
+    return Math.pow(2,c*r)*((5-sev)+(5-urg)+(9-resp)/2+(floo)*4/3)/(3+(floo != 0));
 }

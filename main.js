@@ -1,5 +1,3 @@
-import getDanger from './getDanger';
-
 $('#dangers').hide();
 $('#loading').show();
 
@@ -58,8 +56,7 @@ updatePage = (dangers) => {
 				eventType = 'Other';
 				break;
 		}
-		$('#Event Type-' + eventType);
-		$('#Event Description-' + eventDesc);
+		$('#dangerDesc-' + i).text(eventDesc);		
 		$('#dangerType-' + i).text(eventType);		
 		$('#danger-' + i).text(weights[i][0]).css('color', parseColor(weights[i][0]));
 	}
