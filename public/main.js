@@ -1,7 +1,7 @@
 parseColor = (danger) => {
-	let r = 0xFF0000;
-	let g = 0x00FF00;
-	return '#'+parseInt(g-(danger/10)*(g-r));
+	let value = 10*danger;
+	var hue=((1-value)*120).toString(10);
+	return ["hsl(",hue,",100%,50%)"].join("");
 };
 
 updatePage = (dangers) => {
