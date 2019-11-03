@@ -6,6 +6,10 @@ parseColor = (danger) => {
 
 updatePage = (dangers) => {
 	console.log(dangers);
+	let noDanger = true;
+	for (let i = 0; i < dangers.length; i++)
+		if (dangers[i][0] != 0) noDanger = false;
+	if (noDanger) $("#no-danger").removeClass('d-none');
 	for (let i = 0; i < dangers.length; i++) {
 		let eventType = '';
 		let eventDesc = '';
