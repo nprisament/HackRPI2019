@@ -1,4 +1,4 @@
-module.export = function getWeight(alert, lat, lon){
+function getWeight(alert, lat, lon){
     let c;
     switch(alert.categories.category_cd){
         case 1:

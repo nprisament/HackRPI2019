@@ -1,9 +1,7 @@
-$('#dangers').hide();
-$('#loading').show();
-
 parseColor = (danger) => {return 'red'};
 
 updatePage = (dangers) => {
+	console.log(dangers);
 	for (let i = 0; i < dangers.length; i++) {
 		let eventType = '';
 		let eventDesc = '';
@@ -68,4 +66,9 @@ locationError = () => {
 
 };
 
-getAlerts(getDanger, updatePage);
+$(document).ready(function () {
+	$('#dangers').hide();
+	$('#loading').show();
+	getAlerts(getDanger, updatePage);
+});
+
