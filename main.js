@@ -55,8 +55,9 @@ updatePage = (dangers) => {
 				break;
 		}
 		$('#dangerDesc-' + i).text(eventDesc);		
-		$('#dangerType-' + i).text(eventType);		
-		$('#danger-' + i).text(dangers[i][0]).css('color', parseColor(dangers[i][0]));
+		$('#dangerType-' + (i + 1)).text(eventType);
+		console.log(dangers[i])		
+		$('#danger-' + (i + 1) ).text(dangers[i][0]).css('color', parseColor(dangers[i][0]));
 	}
 	$('#loading').hide();
 	$('#dangers').show();
