@@ -1,6 +1,6 @@
-function getWeight(alert, lat, lon){
+function getWeight(alert, lat, lon, i){
     let c;
-    switch(alert.categories.category_cd){
+    switch(alert.categories[i].category_cd){
         case 1:
             c = .1;
             break;
@@ -41,8 +41,8 @@ function getWeight(alert, lat, lon){
     let r = Math.sqrt(Math.pow(lat-alert.lat,2)+Math.pow(lon-alert.lon,2));
     let sev = alert.severity_cd;
     let urg = alert.urgency_cd;
-    let resp = alert.response_types.response_type_cd;
-    let floo = alert.flood.fld_severity_cd;
+    let resp = alert.response_types[i].response_type_cd;
+    let floo = alert.flood?alert.flood.fld_severity_cd:0;
     floo*=(floo == 1 || floo == 2 || floo == 3)
     return Math.pow(2,c*r)*((5-sev)+(5-urg)+(9-resp)/2+(floo)*4/3)/(3+(floo != 0));
 }
