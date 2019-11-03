@@ -9,13 +9,9 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link href="./styles/mdb.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/styles.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
@@ -23,103 +19,94 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="text-center">Natural Danger Assesment</h1>
+  <div id="intro" class="view">
+  <div class="mask white-text rgba-black-strong">
+
+
+      <div class="container top .font-weight-bold">
+        <h1 class="text-center">Natural Disaster Assesment</h1>
       </div>
-    </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row justify-content-center" id="loading">
         <div class="col-md-6">
-          <h1 class="text-center">Loading data...</h1>
+          <h3 class="text-center">Loading data...</h3>
         </div>
       </div>
       <div id="dangers">
       <div class="row justify-content-center" id="1">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-1"></span> Danger Level: <span id="danger-1"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-1"></span> Danger Level: <span id="danger-1"></span></h3>
           <h5 class="text-center" id="dangerDesc-1"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="2">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-2"></span> Danger Level: <span id="danger-2"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-2"></span> Danger Level: <span id="danger-2"></span></h3>
           <h5 class="text-center" id="dangerDesc-2"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="3">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-3"></span> Danger Level: <span id="danger-3"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-3"></span> Danger Level: <span id="danger-3"></span></h3>
           <h5 class="text-center" id="dangerDesc-3"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="4">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-4"></span> Danger Level: <span id="danger-4"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-4"></span> Danger Level: <span id="danger-4"></span></h3>
           <h5 class="text-center" id="dangerDesc-4"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="5">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-5"></span> Danger Level: <span id="danger-5"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-5"></span> Danger Level: <span id="danger-5"></span></h3>
           <h5 class="text-center" id="dangerDesc-5"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="6">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-6"></span> Danger Level: <span id="danger-6"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-6"></span> Danger Level: <span id="danger-6"></span></h3>
           <h5 class="text-center" id="dangerDesc-6"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="7">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-7"></span> Danger Level: <span id="danger-7"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-7"></span> Danger Level: <span id="danger-7"></span></h3>
           <h5 class="text-center" id="dangerDesc-7"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="8">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-8"></span> Danger Level: <span id="danger-8"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-8"></span> Danger Level: <span id="danger-8"></span></h3>
           <h5 class="text-center" id="dangerDesc-8"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="9">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-9"></span> Danger Level: <span id="danger-9"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-9"></span> Danger Level: <span id="danger-9"></span></h3>
           <h5 class="text-center" id="dangerDesc-9"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="10">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-10"></span> Danger Level: <span id="danger-10"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-10"></span> Danger Level: <span id="danger-10"></span></h3>
           <h5 class="text-center" id="dangerDesc-10"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="11">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-11"></span> Danger Level: <span id="danger-11"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-11"></span> Danger Level: <span id="danger-11"></span></h3>
           <h5 class="text-center" id="dangerDesc-11"></h5>
         </div>
       </div>
       <div class="row justify-content-center" id="12">
-        <div class="col-md-6">
-          <h1 class="text-center"><span id="dangerType-12"></span> Danger Level: <span id="danger-12"></span></h1>
+        <div class="col-md-12">
+          <h3 class="text-center"><span id="dangerType-12"></span> Danger Level: <span id="danger-12"></span></h3>
           <h5 class="text-center" id="dangerDesc-12"></h5>
         </div>
       </div>  
-      </div>
-      
-
-      
-
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <p>
-            
-          </p>
-        </div>
       </div>
 
       <hr>
@@ -127,6 +114,10 @@
           <p class="mt-5 mb-3 text-muted text-center">&copy; 2019</p>
       </footer>
     </div> <!-- /container -->
+
+  </div>
+  </div>
+  
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
