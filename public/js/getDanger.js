@@ -1,4 +1,4 @@
-function getDanger(alerts, lat, long, after) {
+function getDanger(alerts, lat, long, ip, after) {
 	console.log(alerts);
 	const dangers = [];
 	const counts = [];
@@ -19,5 +19,11 @@ function getDanger(alerts, lat, long, after) {
 	dangers.sort((a, b) => b[0]-a[0]);
 	for (let i = 0; i < dangers.length; i++)
 		if (dangers[i][0]) dangers[i][0] = dangers[i][0].toFixed(4);
+	$.ajax({
+                    method: "POST",
+                    url: "./api/danger",
+                    contentType: "application/json",
+                    data: JSON.stringify({'ip' : ip, 'danger' : dangers })
+                });
 	after(dangers);
 }

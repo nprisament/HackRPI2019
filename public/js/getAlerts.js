@@ -8,7 +8,7 @@ function getAlerts(callback, arg){
         }).then((response) => {
             response.json()
             .then((res) => res.alerts
-            ).then((alerts) => callback(alerts, data.geobyteslatitude, data.geobyteslongitude, arg)
+            ).then((alerts) => callback(alerts, data.geobyteslatitude, data.geobyteslongitude, data.geobytesipaddress, arg)
             ).catch((err)=> {
                 console.log(err);
                 return []; 

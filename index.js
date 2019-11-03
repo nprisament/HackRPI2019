@@ -35,15 +35,13 @@ insertOne.cloudant = function(doc, response) {
   });
 }
 
-getAll.cloudant = function(response) {
-  var names = [];  
+getAll.cloudant = function(ip, response) {
   mydb.list({ include_docs: true }, function(err, body) {
     if (!err) {
       body.rows.forEach(function(row) {
-        if(row.doc.name)
-          names.push(row.doc.name);
+        if(row.doc[ip])
+          response.json(row.doc[ip]);
       });
-      response.json(names);
     }
   });
   //return names;
@@ -81,9 +79,11 @@ getAll.mongodb = function(response) {
 *   "name": "Bob"
 * }
 */
-app.post("/api/visitors", function (request, response) {
-  var userName = request.body.name;
-  var doc = { "name" : userName };
+app.post("/api/danger", function (request, response) {
+  var danger = request.body.danger;
+  var ip = request.body.ip;
+  
+  var doc = { ip : danger };
   if(!mydb) {
     console.log("No database.");
     response.send(doc);
@@ -103,13 +103,9 @@ app.post("/api/visitors", function (request, response) {
  * [ "Bob", "Jane" ]
  * @return An array of all the visitor names
  */
-app.get("/api/visitors", function (request, response) {
-  var names = [];
-  if(!mydb) {
-    response.json(names);
-    return;
-  }
-  getAll[vendor](response);
+app.get("/api/danger", function (request, response) {
+  var ip = request.body.ip;
+  getAll[vendor](ip, response);
 });
 
 // load local VCAP configuration  and service credentials
@@ -186,7 +182,7 @@ if(cloudant) {
 }
 
 //serve static file (index.html, images, css)
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 
 
