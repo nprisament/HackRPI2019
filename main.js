@@ -54,10 +54,10 @@ updatePage = (dangers) => {
 				eventType = 'Other';
 				break;
 		}
-		$('#dangerDesc-' + i).text(eventDesc);		
-		$('#dangerType-' + (i + 1)).text(eventType);
-		console.log(dangers[i])		
-		$('#danger-' + (i + 1) ).text(dangers[i][0]).css('color', parseColor(dangers[i][0]));
+		if (dangers[i][0] == 0) $('#' +(i + 1)).hide();
+		$('#dangerDesc-' + (i + 1)).show().text(eventDesc);		
+		$('#dangerType-' + (i + 1)).show().text(eventType);
+		$('#danger-' + (i + 1) ).show().text(dangers[i][0]).css('color', parseColor(dangers[i][0]));
 	}
 	$('#loading').hide();
 	$('#dangers').show();
