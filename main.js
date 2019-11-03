@@ -1,7 +1,7 @@
 parseColor = (danger) => {
-	let r = 0xFF0000
-	let g = 0x00FF00
-	return '#'+parseInt(g-(danger/10)*(g-r))
+	let r = 0xFF0000;
+	let g = 0x00FF00;
+	return '#'+parseInt(g-(danger/10)*(g-r));
 };
 
 updatePage = (dangers) => {
