@@ -39,6 +39,7 @@ function getWeight(alert, lat, lon, i){
             break;
     }
     let r = Math.sqrt(Math.pow(lat-alert.lat,2)+Math.pow(lon-alert.lon,2));
+    if(r>10) return 0;
     let sev = alert.severity_cd;
     let urg = alert.urgency_cd;
     let resp = alert.response_types[i].response_type_cd;
